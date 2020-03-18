@@ -1,0 +1,69 @@
+#maintree img { border: none; }
+#maintree input, #maintree select, #maintree textarea, #maintree th, #maintree td { font-size: 1em; }
+    
+/* CSS Tree menu styles */
+#maintree ol.tree
+{
+    padding: 0 0 0 0px;
+   /* width: 300px;*/
+}
+    #maintree li 
+    { 
+        position: relative; 
+        margin-left: -15px;
+        list-style: none;
+    }
+    #maintree li.file
+    {
+        margin-left: -1px !important;
+    }
+        #maintree li.file a
+        {
+            background: url(../images/document.png) 0 0 no-repeat;
+            color: #fff;
+            padding-left: 21px;
+            text-decoration: none;
+            display: block;
+        }
+        #maintree li.file a[href *= '.pdf']   { background: url(../images/document.png) 0 0 no-repeat; }
+        #maintree li.file a[href *= '.html']  { background: url(../images/document.png) 0 0 no-repeat; }
+        #maintree li.file a[href $= '.css']   { background: url(../images/document.png) 0 0 no-repeat; }
+        #maintree li.file a[href $= '.js']        { background: url(../images/document.png) 0 0 no-repeat; }
+    #maintree li input
+    {
+        position: absolute;
+        left: 0;
+        margin-left: 0;
+        opacity: 0;
+        z-index: 2;
+        cursor: pointer;
+        height: 1em;
+        width: 1em;
+        top: 0;
+    }
+        #maintree li input + ol
+        {
+            background: url(../images/toggle-small-expand.png) 40px -1px no-repeat;
+            margin: -1.25em 0 0 -44px; /* 15px */
+            height: 1em;
+        }
+        #maintree li input + ol > li { display: none; margin-left: -14px !important; padding-left: 1px; }
+    #maintree li label
+    {
+        background: url(../images/folder-horizontal.png) 15px 3px no-repeat;
+        cursor: pointer;
+        display: block;
+        padding-left: 37px;
+		width:110%;
+    }
+	
+
+    #maintree li input:checked + ol
+    {
+        background: url(../images/toggle-small.png) 40px -1px no-repeat;
+        margin: -1.25em 0 0 -44px; /* 20px */
+        padding: 1.563em 0 0 80px;
+        height: auto;
+    }
+        #maintree li input:checked + ol > li { display: block; margin: 0 0 0.125em;  /* 2px */}
+        #maintree li input:checked + ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }

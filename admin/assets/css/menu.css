@@ -1,0 +1,27 @@
+#nav { font: 500 14px "helvetica neue", helvetica, arial, sans-serif; background:#3674c9; margin:0px;padding:0; }
+#nav > li { position: relative; display: inline-block;margin-right:10px; color:#fff; }
+#nav a { display: block; padding: 10px 10px; text-decoration: none; color: #fff; }
+#nav a:active { color: #1BB3D7; }
+#nav .more { background: url(../images/blue-arrow.svg) no-repeat 100% 60%;  }
+#nav > li > ul {
+	display:none;
+	margin:0;
+	padding:0;
+	
+}
+#nav > li:hover > ul {
+	display:block;
+}
+#popover {
+	width:150px; position: absolute; 
+	top: 36px; 
+	left:0;
+	background:#185493;
+	z-index:10000;
+}
+
+#popover li { list-style: none; text-align: left;border-bottom:solid 1px #2b74c0; }
+
+#popover li:hover {
+	background:#186fc9;
+}
